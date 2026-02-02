@@ -2,7 +2,12 @@
 
 A powerful FastAPI-based backend for **Mindbook** an intelligent document management and RAG (Retrieval-Augmented Generation) system that enables smart interactions with your documents.
 
+https://github.com/user-attachments/assets/e21fcb5b-0795-40d8-b465-763e07bc70bc
+
 ---
+
+
+
 
 ## Features
 
