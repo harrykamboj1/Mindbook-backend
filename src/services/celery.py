@@ -23,6 +23,15 @@ app.conf.update(
     worker_task_log_format='%(message)s',  # Same for task logs
     worker_redirect_stdouts=False,  # Don't redirect stdout/stderr
     worker_redirect_stdouts_level='WARNING',  # If redirected, use WARNING level
+    
+    # Optimizations for Upstash/Cloud Redis to reduce costs/usage
+    worker_gossip=False,            # Disable gossip (worker-to-worker communication)
+    worker_mingle=False,            # Disable mingle (synchronization at startup)
+    worker_enable_remote_control=False, # Disable remote control (inspection/params)
+    worker_send_task_events=False,  # Disable task events (monitoring like Flower)
+    
+    # Optional: Increase heartbeat interval if needed, or disable check
+    broker_heartbeat=0, # Disable heartbeats to reduce PING commands
 )
 
 @worker_process_init.connect
